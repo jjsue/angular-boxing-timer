@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-the-timer',
@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TheTimerComponent implements OnInit {
 
+  @Input() timeDataChild:any;
+
   timerMinutes:number = 0;
   timerSeconds:number = 0;
   timerRest:number = 0;
   totalRounds: number = 0;
-  currentRound: number = 0;
+  currentRound: number = 1;
 
   btnText:string="Start";
 
@@ -19,10 +21,19 @@ export class TheTimerComponent implements OnInit {
     console.log("btnClick");
   }
 
-
   constructor() { }
 
   ngOnInit(): void {
+    this.timerMinutes= this.timeDataChild[0];
+    this.timerSeconds= this.timeDataChild[1];
+    this.timerRest= this.timeDataChild[2];
+    this.totalRounds= this.timeDataChild[3];
+  }
+  ngOnChanges(){
+    this.timerMinutes= this.timeDataChild[0];
+    this.timerSeconds= this.timeDataChild[1];
+    this.timerRest= this.timeDataChild[2];
+    this.totalRounds= this.timeDataChild[3];
   }
 
 }

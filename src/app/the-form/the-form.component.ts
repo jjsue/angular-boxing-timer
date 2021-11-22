@@ -21,7 +21,7 @@ export class TheFormComponent implements OnInit {
   }
 
   timeSubmit() {
-    this.senderFunction([this.minutes, this.seconds, this.rounds, this.rest]);
+    this.senderFunction([this.minutes, this.seconds, this.rest, this.rounds]);
   }
 
   senderFunction(value: object) {

@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'boxing-timer';
-
+  timeData:object = [1,1,1,1];
+  @Input() parentData = 15
   timerData(evtData: object) {
-    console.log(evtData);
+    this.timeData = evtData;
   }
 }
