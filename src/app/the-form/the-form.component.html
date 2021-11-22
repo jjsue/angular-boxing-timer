@@ -1,0 +1,23 @@
+<form class="form-inline row">
+    <div class="form-group col-3">
+        <label>Minutes</label>
+        <input type="number" class="form-control" name="minutes" [(ngModel)]="minutes">
+    </div>
+    <div class="form-group col-3">
+        <label>Seconds</label>
+        <input type="number" class="form-control" name="seconds" [(ngModel)]="seconds">
+    </div>
+    <div class="form-group col-3">
+        <label>Rounds</label>
+        <input type="number" class="form-control" name="rounds" [(ngModel)]="rounds">
+    </div>
+    <div class="form-group col-3">
+        <label>Rest</label>
+        <input type="number" class="form-control" name="rest" [(ngModel)]="rest">
+    </div>
+    <div class="row mt-1">
+        <div class="col">
+            <button type="submit" class="btn btn-primary" (click)="timeSubmit()">Submit</button>
+        </div>
+    </div>
+</form>
