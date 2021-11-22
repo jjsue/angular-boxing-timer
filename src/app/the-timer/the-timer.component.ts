@@ -12,6 +12,14 @@ export class TheTimerComponent implements OnInit {
   timerRest:number = 0;
   totalRounds: number = 0;
   currentRound: number = 0;
+
+  btnText:string="Start";
+
+  btnClick(){
+    console.log("btnClick");
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {
